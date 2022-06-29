@@ -230,7 +230,7 @@ GameObject:
   - component: {fileID: 511894370}
   m_Layer: 0
   m_Name: ZonaDeAgarre
-  m_TagString: PlayerInteractionzone
+  m_TagString: PlayerInteractionZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -243,8 +243,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 511894368}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.225, z: 0.62}
-  m_LocalScale: {x: 0.78396, y: 0.7338623, z: 0.49684373}
+  m_LocalPosition: {x: 0, y: -0.304, z: 0.62}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_Children: []
   m_Father: {fileID: 911077696}
   m_RootOrder: 4
@@ -479,7 +479,6 @@ GameObject:
   - component: {fileID: 709257800}
   - component: {fileID: 709257799}
   - component: {fileID: 709257798}
-  - component: {fileID: 709257797}
   m_Layer: 0
   m_Name: Cube (3)
   m_TagString: Untagged
@@ -501,22 +500,6 @@ Transform:
   m_Father: {fileID: 955744246}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &709257797
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 709257795}
-  serializedVersion: 2
-  m_Mass: 3
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!65 &709257798
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -733,6 +716,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ObjectToPickup: {fileID: 0}
+  pickedObject: {fileID: 0}
+  InteractionZone: {fileID: 511894369}
 --- !u!1 &933293214
 GameObject:
   m_ObjectHideFlags: 0
@@ -1016,7 +1001,6 @@ GameObject:
   - component: {fileID: 1133075337}
   - component: {fileID: 1133075336}
   - component: {fileID: 1133075335}
-  - component: {fileID: 1133075334}
   m_Layer: 0
   m_Name: Cube (2)
   m_TagString: Untagged
@@ -1038,22 +1022,6 @@ Transform:
   m_Father: {fileID: 1734535872}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &1133075334
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1133075332}
-  serializedVersion: 2
-  m_Mass: 3
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!65 &1133075335
 BoxCollider:
   m_ObjectHideFlags: 0
