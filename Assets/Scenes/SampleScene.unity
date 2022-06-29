@@ -434,10 +434,8 @@ GameObject:
   - component: {fileID: 911077696}
   - component: {fileID: 911077700}
   - component: {fileID: 911077699}
-  - component: {fileID: 911077698}
   - component: {fileID: 911077697}
   - component: {fileID: 911077701}
-  - component: {fileID: 911077702}
   m_Layer: 0
   m_Name: Robot
   m_TagString: Untagged
@@ -453,7 +451,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 911077695}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.558, z: 0}
+  m_LocalPosition: {x: 0, y: 1.737, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 559697839}
@@ -479,19 +477,8 @@ MonoBehaviour:
   verticalMove: 0
   Player: {fileID: 0}
   playerspeed: 2
---- !u!65 &911077698
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 911077695}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  mainCamera: {fileID: 963194227}
+  gravity: 9.8
 --- !u!23 &911077699
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -559,22 +546,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &911077702
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 911077695}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &933293214
 GameObject:
   m_ObjectHideFlags: 0

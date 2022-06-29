@@ -13,6 +13,9 @@ public class MovimientoPlayer : MonoBehaviour
     public Camera mainCamera;
     private Vector3 camForward;
     private Vector3 camRight;
+
+    public float gravity=9.8f;
+    public float fallvelocity;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,10 +34,14 @@ public class MovimientoPlayer : MonoBehaviour
         camDirection();
 
         moveplayer = playerInput.x * camRight + playerInput.z * camForward;
+        moveplayer = moveplayer * playerspeed;
         Player.transform.LookAt(Player.transform.position + moveplayer);
-
-        Player.Move(playerInput * playerspeed * Time.deltaTime);
+        SetGravity();
+        Player.Move(moveplayer * Time.deltaTime);
+        
         Debug.Log(Player.velocity.magnitude);
+
+        
     }
     void camDirection()
     {
@@ -44,6 +51,20 @@ public class MovimientoPlayer : MonoBehaviour
         camRight.y = 0;
         camForward = camForward.normalized;
         camRight = camRight.normalized;
+    }
+    void SetGravity()
+    {
+        
+        if(Player.isGrounded)
+        {
+           fallvelocity = -gravity * Time.deltaTime;
+            moveplayer.y = fallvelocity;
+        }
+        else
+        {
+            fallvelocity -= gravity * Time.deltaTime;
+            moveplayer.y = fallvelocity;
+        }
     }
  
 }
