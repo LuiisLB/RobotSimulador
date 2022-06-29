@@ -16,6 +16,7 @@ public class MovimientoPlayer : MonoBehaviour
 
     public float gravity=9.8f;
     public float fallvelocity;
+    public float Jumpforce;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,7 +37,9 @@ public class MovimientoPlayer : MonoBehaviour
         moveplayer = playerInput.x * camRight + playerInput.z * camForward;
         moveplayer = moveplayer * playerspeed;
         Player.transform.LookAt(Player.transform.position + moveplayer);
+
         SetGravity();
+        playerskills();
         Player.Move(moveplayer * Time.deltaTime);
         
         Debug.Log(Player.velocity.magnitude);
@@ -51,6 +54,14 @@ public class MovimientoPlayer : MonoBehaviour
         camRight.y = 0;
         camForward = camForward.normalized;
         camRight = camRight.normalized;
+    }
+    public void playerskills()
+    {
+        if (Player.isGrounded&&Input.GetButtonDown("Jump"))
+        {
+            fallvelocity = Jumpforce;
+            moveplayer.y = fallvelocity;
+        }
     }
     void SetGravity()
     {
